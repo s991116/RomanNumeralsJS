@@ -9,6 +9,9 @@
 *.userosscache
 *.sln.docstates
 
+dist/*
+coverage/*
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -286,3 +289,9 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/dist
+/dist/RomanNumeralts_tests.js.map
+/dist/RomanNumeralts_tests.js
+/dist/RomanNumerals.js.map
+/dist/RomanNumerals.js
+*.js
