@@ -14,7 +14,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9b647b5d-55f0-48c5-8514-55efa29b35b7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -31,7 +32,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
     <Compile Include="karma.conf.js" />
     <Compile Include="RomanNumeralts_tests.ts">
       <SubType>Code</SubType>
