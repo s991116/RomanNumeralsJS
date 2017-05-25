@@ -42,6 +42,44 @@ var romanLetters = [
     }
 ];
 
+var decimalValuesToRoman = [
+    {
+        DigitPosition: 1,
+        Romans: ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+    },
+    {
+        DigitPosition: 2,
+        Romans: ["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+    },
+    {
+        DigitPosition: 3,
+        Romans: ["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+    },
+    {
+        DigitPosition: 4,
+        Romans: ["M", "MM", "MMM"]
+    }
+];
+
+function decimalToRoman(decimal: number) {
+    var ones = decimal % 10;
+    var teens = (decimal % 100 - ones) / 10;
+    var hundreds = (decimal % 1000 - teens*10 - ones) / 100;
+    var thusands = (decimal % 10000 - hundreds * 100 - teens * 10 - ones) / 1000;
+
+    var romanNumerals = "";
+    if (thusands > 0)
+        romanNumerals += decimalValuesToRoman[3].Romans[thusands - 1];
+    if (hundreds > 0)
+        romanNumerals += decimalValuesToRoman[2].Romans[hundreds - 1];
+    if (teens > 0)
+        romanNumerals += decimalValuesToRoman[1].Romans[teens - 1];
+    if (ones > 0)
+        romanNumerals += decimalValuesToRoman[0].Romans[ones - 1];
+
+    return romanNumerals;
+}
+
 function romanToDecimal(romanNumeral: string) {
     var value = 0;
     var previousValue = 0;

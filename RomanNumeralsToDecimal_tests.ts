@@ -1,6 +1,6 @@
 ﻿/// <reference path="./typings/globals/jasmine/index.d.ts" />
 
-describe("Roman unittest",
+describe("Roman to decimal unittest",
      () => {
          it("Convert single letter",
              () => {
@@ -48,7 +48,7 @@ describe("Roman unittest",
              });
      }
 );
-describe("Roman accepttest",
+describe("Roman to decimal accepttest",
     () => {
         it("Convert roman 'MMCDXLIV' should be 2444",
             () => {
